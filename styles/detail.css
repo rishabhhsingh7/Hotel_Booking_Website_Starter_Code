@@ -1,4 +1,13 @@
-* {
-    display: flex;
-    flex-wrap: wrap;
+#content{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+#detail-img{
+    margin-top: 2%;
+}
+#hotel-form{
+    margin-bottom: 1%;
+}
+#hotel-description{
+    margin-bottom: 2%;
 }

@@ -1,4 +1,55 @@
-.city_img {
-    float: left;
-    padding: 1px;
+* {
+    font-family: Ubuntu, sans-serif;
+}
+
+body {
+    background-color: #e0e0e0;
+}
+
+header,
+footer {
+    background-color: rosybrown;
+    height: 60px;
+}
+
+#search-bar {
+    background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
+    background-repeat: no-repeat;
+    height: 380px;
+    background-position: center;
+    background-size: cover;
+}
+
+.city-img {
+    padding: 4%;
+    border-radius: 25%;
+    margin: 0 auto;
+}
+
+#city-list {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#login a {
+    margin: auto 20px;
+}
+
+#logo img {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    height: 60px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    float: right;
 }

@@ -1,8 +1,57 @@
-.logo {
-    border-radius: 60px 60px;
+html,
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
 }
 
-#link {
-    width: 22px;
+#main-body {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red;
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+}
+
+header img {
+    height: 60px;
+    width: 60px;
+}
+
+.city-img {
+    height: 150px;
+    width: 150px;
+}
+
+.hotel-img {
+    height: 200px;
+    width: 250px;
+}
+
+.big-img {
+    height: 500px;
+    width: 500px;
+}
+
+footer img {
     height: 20px;
+    width: 22px;
+}
+
+header,
+footer {
+    background-color: rosybrown;
+}
+
+body {
+    background-color: #e0e0e0;
 }
