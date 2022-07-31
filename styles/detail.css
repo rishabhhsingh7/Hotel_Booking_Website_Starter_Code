@@ -69,3 +69,17 @@
 .cursive {
     font-family: cursive;
 }
+
+.carousel-control-next-icon {
+    background-image: url(../assests/images/next.svg);
+    background-size: 55px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../assests/images/previous.svg);
+    background-size: 55px;
+}
+
+.coursal-image {
+    margin: 0 auto;
+}
