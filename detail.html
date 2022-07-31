@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/detail.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/detail.css" />
     <title>Detail</title>
-</head>
-<body>
-<div id="main-body">
-    <header>
+  </head>
+  <body>
+    <div id="main-body">
+      <header>
         <a href="./index.html"
           ><img
             src="./assests/images/logo.png"
@@ -23,78 +23,107 @@
         </div>
       </header>
       <div class="height"></div>
-    <div id="content">
-        
-        <img id="detail-img" class="big-img" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="radisson blu">
-        <div id="hotel-form">
-        <form action="./payment.html">
-        <label for="adults">Adults:</label>
-        <input type="number" min="1" name="adults" required><br>
+      <div id="content">
+        <div class="hotel-tab">
+          <div id="detail-img">
+            <img
+              class="big-img"
+              src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
+              alt="radisson blu"
+            />
+          </div>
 
-        <label for="Name">Name:</label>
-        <input type="text" name="Name" required><br>
+          <div id="hotel-form">
+            <form action="./payment.html">
+              <div class="input">
+                <div class="label-input">
+                  <label for="adults">Adults:</label>
+                  <input type="number" min="1" name="adults" required /><br />
+                </div>
 
-        <label for="from-date">From Date:</label>
-        <input type="date" name="from-date" required><br>
+                <div class="label-input">
+                  <label for="Name">Name:</label>
+                  <input type="text" name="Name" required /><br />
+                </div>
 
-        <label for="to-date">To Date:</label>
-        <input type="date" name="to-date" required><br>
+                <div class="label-input">
+                  <label for="from-date">From Date:</label>
+                  <input type="date" name="from-date" required /><br />
+                </div>
 
-        <label for="Total">Total:</label>
-        <input type="text" name="Total" readonly><br>
+                <div class="label-input">
+                  <label for="to-date">To Date:</label>
+                  <input type="date" name="to-date" required /><br />
+                </div>
 
-        <button>Book Now</button>
-        </form>
-    </div>
-    <div id="hotel-description">
-        <h2>Radisson Blu Hotel</h2>
-        <p>Rating</p>
-        <p>5 Star</p>
-        <p>AMENITIES <br>
-        <ul>
+                <div class="label-input">
+                  <label for="Total">Total:</label>
+                  <input type="text" name="Total" readonly /><br />
+                </div>
+
+                <div class="label-input">
+                  <div class="adjust"></div>
+                  <button id="button">Book Now</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="hotel-description">
+          <h2>Radisson Blu Hotel</h2>
+          <h5 class="cursive">RATING</h5>
+          <p>5 Star</p>
+          <h5 class="cursive">AMENITIES</h5>
+          <ul>
             <li>Room Service</li>
             <li>Reataurant</li>
             <li>Business center</li>
             <li>Fitness Center</li>
             <li>Pool</li>
-        </ul></p>
-        <h5>DESCRIPTION</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ullam, recusandae expedita nobis, iusto dolorem nihil voluptate blanditiis non quasi veniam, laudantium distinctio adipisci aliquam corporis quis. Assumenda, provident dolor ducimus qui eum odio.</p>
-    </div>
-</div>
-<div class="height"></div>
-<footer>
-    <div id="contact-us">
-    <a  href="./contact.html" target="_blank">Contact Us</a>
-  </div>
-  <div id="copyright">
-    <p >&#169; 2020 ROOM SEARCH PVT.LTD</p>
-  </div>
+          </ul>
+          <h5 class="cursive">DESCRIPTION</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            ullam, recusandae expedita nobis, iusto dolorem nihil voluptate
+            blanditiis non quasi veniam, laudantium distinctio adipisci aliquam
+            corporis quis. Assumenda, provident dolor ducimus qui eum odio.
+          </p>
+        </div>
+      </div>
+      <div class="height"></div>
+      <footer>
+        <div id="contact-us">
+          <a href="./contact.html" target="_blank">Contact Us</a>
+        </div>
+        <div id="copyright">
+          <p>&#169; 2020 ROOM SEARCH PVT.LTD</p>
+        </div>
 
-  <div class="links">
-    <a href="https://www.facebook.com/" target="_blank"
-      ><img
-        src="./assests/images/facebook.png"
-        alt="facebook"
-        height="20px"
-        width="22px"
-    /></a>
-    <a href="https://www.instagram.com/" target="_blank"
-      ><img
-        src="./assests/images/instagram.png"
-        alt="instagram"
-        height="20px"
-        width="22px"
-    /></a>
-    <a href="https://www.twitter.com/" target="_blank"
-      ><img
-        src="./assests/images/twitter.png"
-        alt="twitter"
-        height="20px"
-        width="22px" /></a
-    ><br />
-  </div>
-</footer>
-</div>
-</body>
+        <div class="links">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img
+              src="./assests/images/facebook.png"
+              alt="facebook"
+              height="20px"
+              width="22px"
+          /></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img
+              src="./assests/images/instagram.png"
+              alt="instagram"
+              height="20px"
+              width="22px"
+          /></a>
+          <a href="https://www.twitter.com/" target="_blank"
+            ><img
+              src="./assests/images/twitter.png"
+              alt="twitter"
+              height="20px"
+              width="22px" /></a
+          ><br />
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

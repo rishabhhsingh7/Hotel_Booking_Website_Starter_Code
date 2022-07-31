@@ -1,8 +1,10 @@
 .hotel-card{
-    margin: 2%;
-    background-color:rgb(132,136,139);
-    width: 40%;
-    display: inline-block;
+    margin: 2% 4%;
+    background-color:lightgrey;
+    flex-basis: 40%;
+    flex-shrink: 0;
+    /* display: inline-block; */
+    display: flex;
 }
  .view li{
     list-style: none;
@@ -15,6 +17,7 @@
     /* border: 1px solid red; */
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 /*
 .view li{
@@ -22,7 +25,17 @@
     margin-left: 5px;
     border: 2px solid black;
 } */
-
+.card-container{
+    display: inline-block;
+}
 #map-view{
     display: none;
+}
+#list-view{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.description{
+    margin-left: 2%;
 }

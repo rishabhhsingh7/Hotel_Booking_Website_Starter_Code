@@ -31,10 +31,7 @@ header img{
     height: 200px;
     width: 250px;
 }
-.big-img{
-    height: 500px;
-    width: 500px;
-}
+
 footer img{
     height: 20px;
     width: 22px;
@@ -47,6 +44,9 @@ header, footer{
     height: 60px;
     width: 100%;
     position: fixed;
+}
+#content{
+    width: 100%;
 }
 header{
     display: flex;
@@ -66,11 +66,12 @@ footer{
     clear: both;
     height: 70px;
 }
-#login a{
-    margin:auto 20px;
+#login{
+    margin:2%;
 }
 #logo{
     height: 60px;
+    margin: 1%;
 }
 
 .links{
@@ -78,7 +79,7 @@ footer{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 2%;
 }
 a{
     position: relative;
@@ -89,7 +90,7 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 #copyright p{
     font-size: 10px;
@@ -100,5 +101,5 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 20px;
+    margin-left: 6%;
 }
