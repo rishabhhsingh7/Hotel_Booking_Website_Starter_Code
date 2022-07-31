@@ -2,4 +2,27 @@
     margin: 2%;
     background-color:rgb(132,136,139);
     width: 40%;
+    display: inline-block;
+}
+ .view li{
+    list-style: none;
+    font-weight: bold;
+    float: right;
+    /* border: 1px solid blue; */
+    margin: 0 34px;
+}
+.view{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+}
+/*
+.view li{
+    float: right;
+    margin-left: 5px;
+    border: 2px solid black;
+} */
+
+#map-view{
+    display: none;
 }
