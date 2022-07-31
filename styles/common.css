@@ -1,17 +1,20 @@
-*{
+* {
     font-family: Ubuntu, sans-serif;
 }
-html, body{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+
+html,
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: 0;
     padding: 0;
     height: 100vh;
 }
-#main-body{
+
+#main-body {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -23,79 +26,95 @@ html, body{
     right: 0;
     bottom: 0; */
 }
-header img{
+
+header img {
     height: 60px;
     width: 60px;
 }
-.hotel-img{
+
+.hotel-img {
     height: 200px;
     width: 250px;
 }
 
-footer img{
+footer img {
     height: 20px;
     width: 22px;
 }
-body{
+
+body {
     background-color: #e0e0e0;
 }
-header, footer{
+
+header,
+footer {
     background-color: rosybrown;
     height: 60px;
     width: 100%;
     position: fixed;
 }
-#content{
+
+#content {
     width: 100%;
 }
-header{
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 3;
 }
-footer{
+
+footer {
     position: absolute;
     bottom: 0;
     display: grid;
     grid-template-columns: auto auto auto;
     position: fixed;
-    margin-top: 30px;   
+    margin-top: 30px;
 }
-.height{
+
+.height {
     clear: both;
     height: 70px;
 }
-#login{
-    margin:2%;
+
+#login {
+    margin: 2%;
 }
-#logo{
+
+#logo {
     height: 60px;
     margin: 1%;
 }
 
-.links{
+.links {
     grid-column: 3;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-right: 2%;
 }
-a{
+
+a {
     position: relative;
     text-decoration: none;
     color: black;
 }
-#copyright{
+
+#copyright {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#copyright p{
+
+#copyright p {
     font-size: 10px;
+    margin: 0;
 }
-#contact-us{
+
+#contact-us {
     grid-column: 1;
     height: 60px;
     display: flex;

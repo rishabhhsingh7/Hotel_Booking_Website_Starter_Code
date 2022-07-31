@@ -1,8 +1,8 @@
-body{
+body {
     background-color: #e0e0e0;
 }
 
-#search-area{
+#search-area {
     background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
     background-repeat: no-repeat;
     height: 380px;
@@ -12,18 +12,20 @@ body{
     justify-content: center;
     align-items: center;
 }
-.city-img{
+
+.city-img {
     height: 150px;
     width: 150px;
     border-radius: 25%;
 }
-#city-list{
-   margin-left: 15%;
-   margin-right: 15%;
-   padding: 4% 0;
+
+#city-list {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 4% 0;
 }
 
-#search-input{
+#search-input {
     border: none;
     outline: none;
     background-color: #f1f1f1;
@@ -33,41 +35,48 @@ body{
     width: 30%;
     z-index: 4;
 }
-#content{
+
+#content {
     display: flex;
     flex-direction: column;
 }
-#city-list{
+
+#city-list {
     width: 100vw;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
-#view{
+
+#view {
     text-align: center;
 }
-.container:hover .overlay{
+
+.img-container:hover .overlay {
     position: absolute;
-    background-color:rgba(0, 0, 0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100%;
     width: 100%;
     border-radius: 25%;
     top: 0;
     left: 0;
 }
-.container:hover .text {
+
+.img-container:hover .text {
     z-index: 2;
 }
-.text{
+
+.text {
     color: #f1f1f1;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: -2;
 }
-.container{
+
+.img-container {
     position: relative;
     height: 150px;
     width: 150px;

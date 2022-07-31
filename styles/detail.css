@@ -1,37 +1,43 @@
-#content{
+#content {
     margin-left: 2%;
     margin-right: 2%;
     width: 96%;
 }
-.hotel-tab{
+
+.hotel-tab {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
     height: 400px;
 }
-#detail-img{
+
+#detail-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 75%;
+    flex-basis: 65%;
 }
-.big-img{
+
+.big-img {
     max-height: 350px;
     max-width: 500px;
 }
-#hotel-form{
-    flex-basis: 25%;
+
+#hotel-form {
+    flex-basis: 35%;
     height: 400px;
     border-left: 1px solid black;
 }
-.label-input{
+
+.label-input {
     display: flex;
     flex-wrap: wrap;
-    align-items: center; 
+    align-items: center;
     justify-content: flex-start;
 }
-.input{
+
+.input {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,23 +45,27 @@
     width: 92%;
     margin: 0 auto;
 }
-.label-input input{
+
+.label-input input {
     flex: 1 0 60%;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
-.label-input label,.adjust{
-    margin-right: 2%;
+
+.label-input label,
+.adjust {
     flex: 1 0 30%;
     flex-grow: 0;
 }
-#button{
+
+#button {
     padding: 4px;
 }
-#hotel-description{
+
+#hotel-description {
     margin-bottom: 2%;
 }
-.cursive{
+
+.cursive {
     font-family: cursive;
 }
-
-
-
