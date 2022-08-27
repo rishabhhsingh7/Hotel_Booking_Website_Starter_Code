@@ -14,3 +14,7 @@ function toggleimages(e) {
     isclick = true;
   }
 }
+
+function find(name) {
+  localStorage.setItem("searchvalue", name);
+}
