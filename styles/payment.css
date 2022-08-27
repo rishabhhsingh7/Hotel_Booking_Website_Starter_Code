@@ -1,33 +1,116 @@
-#content{
+/* section css */
+section {
+    margin: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
-#hotel-details{
-    background-color: rgb(132,136,139);
-    height: 20%;
-    width: 50%;
-    margin: 2% auto;
-    display: flex;
-    align-items: center;
+
+.hotel-images img {
+    height: auto;
+    width: 270px;
+
 }
 
-#payment-details{
-    margin: 0 2%;
+.hotel-images {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(132, 136, 139);
+    width: 50%;
+    height: 20%;
+    align-content: center;
+    margin: 8% auto 2% auto;
+}
+
+#customer-info {
+    margin: 2%;
+}
+
+b {
+    font-family: cursive;
+}
+
+#payment-details {
+    display: flex;
+    justify-content: space-around;
     border: 1px solid black;
     border-radius: 5px;
-    padding: 1% 2%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 6%;
     background-color: rosybrown;
 }
-.hotel-img{
-    max-height: 300px;
-    max-width: 270px;
+
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 4%
 }
-.address{
-    margin-left: 2%;
+
+#footer-logo-div img {
+    height: 20px;
+    width: 22px;
 }
-strong{
-    font-family: cursive;
+
+/* 
+   responsive css */
+
+@media screen and (min-device-width: 576px) and (max-device-width: 768px) {
+    .hotel-images {
+        margin: 14% auto 2% auto;
+        width: 85%;
+        height: 200px;
+    }
+
+    .hotel-images img {
+        height: 200px;
+        width: 270px;
+    }
+
+    article {
+        padding-left: 3%;
+    }
+
+    #footer-div {
+        padding: 2%;
+    }
+}
+
+
+
+@media screen and (max-width:576px) {
+    .hotel-images {
+        flex-direction: column;
+        margin: 20% auto 2% auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .hotel-images img {
+        margin-top: 2%;
+        margin-left: 8%;
+        height: auto;
+        width: 270px;
+    }
+
+    article {
+
+        margin-left: 4%;
+    }
+
+    #payment-details {
+        flex-direction: column;
+    }
+
+    #button {
+        width: 40%;
+        margin-left: 23%;
+        margin-bottom: 2%;
+    }
+
+    #payment-details {
+        margin-bottom: 14%;
+    }
 }

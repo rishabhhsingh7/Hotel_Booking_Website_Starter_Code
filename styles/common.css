@@ -1,124 +1,100 @@
-* {
-    font-family: Ubuntu, sans-serif;
-}
+  /* header css */
+  * {
+      margin: 0;
 
-html,
-body {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
+  }
 
-#main-body {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    /* border: 1px solid red;
-    /* top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; */
-}
+  body {
+      margin: 0;
+      display: block;
+      background-color: #e0e0e0;
+      font-family: 'Ubuntu', sans-serif;
+  }
 
-header img {
-    height: 60px;
-    width: 60px;
-}
+  .container {
+      margin: 0;
+      display: block;
+      padding: 0 !important;
+      min-width: 100%;
+  }
 
-.hotel-img {
-    height: 200px;
-    width: 250px;
-}
+  a {
+      text-decoration: none;
+      color: black;
+  }
 
-footer img {
-    height: 20px;
-    width: 22px;
-}
 
-body {
-    background-color: #e0e0e0;
-}
+  header {
+      top: 0;
+      background-color: rosybrown;
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 1;
+  }
 
-header,
-footer {
-    background-color: rosybrown;
-    height: 60px;
-    width: 100%;
-    position: fixed;
-}
+  .login-link {
+      padding: 1%;
+      margin-right: 1%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 
-#content {
-    width: 100%;
-}
+  #logo {
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+  }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 3;
-}
+  .logo {
+      margin-left: 1%;
+  }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    position: fixed;
-    margin-top: 30px;
-}
+  .modal-backdrop.show {
+      opacity: 0;
+  }
 
-.height {
-    clear: both;
-    height: 70px;
-}
+  .modal-backdrop {
+      position: static;
+  }
 
-#login {
-    margin: 2%;
-}
 
-#logo {
-    height: 60px;
-    margin: 1%;
-}
+  /* footer css */
 
-.links {
-    grid-column: 3;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 2%;
-}
+  footer {
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1%;
+      bottom: 0;
+      background-color: rosybrown;
+  }
 
-a {
-    position: relative;
-    text-decoration: none;
-    color: black;
-}
+  #footer-logo-div img {
+      height: 20px;
+      width: 22px;
+  }
 
-#copyright {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+  #footer-logo-div {
+      order: 3;
+      margin-right: 2%;
+  }
 
-#copyright p {
-    font-size: 10px;
-    margin: 0;
-}
+  #contact-us-div {
+      order: 1;
+      margin-left: 2%;
+  }
 
-#contact-us {
-    grid-column: 1;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 6%;
-}
+  #footer-div {
+      font-size: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      order: 2;
+  }

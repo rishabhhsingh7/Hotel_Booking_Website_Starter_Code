@@ -1,26 +1,109 @@
-.hotel-card {
-    margin: 2% 4%;
-    background-color: lightgrey;
-    flex-basis: 40%;
-    flex-shrink: 0;
-    /* display: inline-block; */
-    display: flex;
+/* section css */
+section {
+    margin: 0;
+    width: 100%;
 }
 
-.hotel-card:hover {
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.checked {
+    color: orange;
+}
+
+#nav-links {
+    margin: 6% 0 1% 0;
+}
+
+#nav-links ul {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+#content-images {
+    justify-content: space-evenly;
+
+    margin-bottom: 6%;
+
+}
+
+.hotel-images {
+
+    display: inline-block;
+    margin: 4%;
+    width: 40%;
+    background-color: lightgray;
+    line-height: 35px;
+}
+
+.hotel-images:hover {
     background-color: rosybrown;
 }
 
-.card-container {
-    display: inline-block;
+.hotel-images img {
+    float: left;
+    height: 150px;
+    width: 150px;
+    margin-right: 2%;
+
 }
 
-#list-view {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+
+
+/* responsive css */
+
+@media screen and (min-device-width: 576px) and (max-device-width: 768px) {
+    #content-images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hotel-images {
+        width: auto;
+    }
+
+    #nav-links {
+        margin: 12% 0 1% 0;
+    }
+
+    .login-link {
+        margin-right: 3%;
+    }
+
+    #mapview img {
+        width: 100%;
+    }
+
+    .mapview {
+        transform: translate(-1%, -150%);
+    }
 }
 
-.description {
-    margin-left: 2%;
+@media screen and (max-width: 576px) {
+    #content-images {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hotel-images {
+        width: auto;
+    }
+
+    #nav-links {
+        margin: 17% 0 1% 0;
+    }
+
+    .mapview img {
+        width: 100%;
+        transform: translate(1%, -260%);
+    }
+
+    #footer-div {
+        padding-top: 2%;
+    }
+
 }

@@ -1,85 +1,195 @@
-#content {
-    margin-left: 2%;
-    margin-right: 2%;
-    width: 96%;
-}
-
-.hotel-tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    height: 400px;
-}
-
-#detail-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-basis: 65%;
-}
-
-.big-img {
-    max-height: 350px;
-    max-width: 500px;
-}
-
-#hotel-form {
-    flex-basis: 35%;
-    height: 400px;
-    border-left: 1px solid black;
-}
-
-.label-input {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.input {
+/*content css */
+section {
+    padding: 4% 0 4% 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 400px;
-    width: 92%;
-    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.label-input input {
-    flex: 1 0 60%;
-    flex-grow: 0;
-    flex-shrink: 0;
+
+#search-bar-div {
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    text-align: center;
 }
 
-.label-input label,
-.adjust {
-    flex: 1 0 30%;
-    flex-grow: 0;
+#search-bar-div input {
+    margin-top: 10%;
+    border: 1px transparent;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 25%;
+    outline: none;
 }
 
-#button {
-    padding: 4px;
+
+#content-viewmore-div {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 2%;
 }
 
-#hotel-description {
-    margin-bottom: 2%;
+#content-images-div {
+    margin: 4% 0 4% 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
 }
 
-.cursive {
-    font-family: cursive;
+.imageclass img {
+    border-radius: 25%;
+    height: 150px;
+    width: 150px;
+    box-shadow: 10px 10px 10px grey;
+
+
 }
 
-.carousel-control-next-icon {
-    background-image: url(../assests/images/next.svg);
-    background-size: 55px;
+.imageclass {
+    position: relative;
+    text-align: center;
+    margin: 15%;
+
 }
 
-.carousel-control-prev-icon {
-    background-image: url(../assests/images/previous.svg);
-    background-size: 55px;
+.imageclass:hover img {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+
+
 }
 
-.coursal-image {
-    margin: 0 auto;
+#cityname {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imageclass:hover #cityname {
+    visibility: visible;
+    color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 63%;
+    height: 100%;
+    padding-top: 25%;
+    border-radius: 25%;
+
+}
+
+.collapse {
+    display: none;
+}
+
+#search-bar-div {
+    background: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+/* responsive css */
+@media screen and (min-device-width: 576px) and (max-device-width: 768px) {
+    #content-images-div {
+        display: grid;
+        grid-template-columns: auto auto;
+
+    }
+
+    .imageclass:hover #cityname {
+        width: 250px;
+        height: 250px;
+        padding-top: 80%;
+
+    }
+
+    #cityname {
+        transform: translate(-26%, -78%);
+        font-size: 150%;
+    }
+
+    .imageclass img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .imageclass {
+        width: 35%;
+        height: 100%;
+        padding-right: 2%;
+        padding-bottom: 6%;
+    }
+
+    #search-bar-div input {
+        margin-top: 25%;
+        width: 50%;
+    }
+
+    #content-viewmore-div {
+        padding-bottom: 4%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+
+    #content-images-div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #search-bar-div input {
+        margin-top: 50%;
+        width: 50%;
+    }
+
+    .imageclass {
+        padding: 2%;
+        margin-right: 18%;
+    }
+
+    #content-viewmore-div {
+        padding-bottom: 20%;
+        padding-top: 4%;
+    }
+
+    .imageclass img {
+        border-radius: 25%;
+        box-shadow: 10px 10px 10px grey;
+        width: 150px;
+        height: 150px;
+    }
+
+    #content-images-div {
+        margin: 0;
+    }
+
+
+    #cityname {
+        transform: translate(-50%, -50%);
+
+
+    }
+
+    .imageclass:hover #cityname {
+
+        width: 150px;
+        height: 150px;
+        padding-top: 20%;
+
+    }
+
+    #footer-div {
+        padding-top: 2%;
+    }
 }
