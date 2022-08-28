@@ -16,12 +16,22 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQmmKSTvEXkCYRaoVerfHc3L29HpmZLdo&libraries=places,geometry"
+      async
+      defer
+    ></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
     <link rel="stylesheet" href="./styles/common.css" />
     <link rel="stylesheet" href="./styles/list.css" />
     <title>List</title>
   </head>
 
   <body>
+    <div class="loadcontainer">
+      <div class="loader"></div>
+    </div>
     <div class="container">
       <header></header>
       <section>
@@ -68,11 +78,7 @@
               role="tabpanel"
               aria-labelledby="pills-profile-tab"
             >
-              <div id="mapview">
-                <img
-                  src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png"
-                />
-              </div>
+              <div id="map"></div>
             </div>
           </div>
         </div>

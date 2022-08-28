@@ -1,6 +1,9 @@
-let id = localStorage.getItem("id");
-
-console.log(id);
+let locationid;
+if (localStorage.getItem("locationid") == null) {
+  locationid = localStorage.getItem("locationidMap");
+} else {
+  locationid = localStorage.getItem("locationid");
+}
 
 function calculate(e) {
   try {
@@ -27,36 +30,57 @@ function calculate(e) {
   }
 }
 
-function hotelimages(id) {
+function hoteldetails(id) {
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth() + 1;
+  var yyyy = today.getFullYear();
+  var checkin = yyyy + "-" + mm + "-" + dd;
   const options = {
     method: "GET",
     headers: {
       "X-RapidAPI-Key": "1d0c0bb895msh1e5a7342836dd3cp10cfb0jsnbfb45de784ac",
-      "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
+      "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com",
     },
   };
+  let loader = document.querySelector(".loadcontainer");
+  console.log(loader);
+  loader.style.display = "flex";
   fetch(
-    `https://hotels4.p.rapidapi.com/properties/get-hotel-photos?id=${id}`,
+    `https://travel-advisor.p.rapidapi.com/hotels/get-details?location_id=${locationid}&checkin=${checkin}&adults=1&lang=en_US&currency=USD&nights=2`,
     options
   )
     .then((response) => response.json())
     .then((response) => {
-      res = response.hotelImages;
-      for (let index = 0; index < 7; index++) {
-        const element = res[index];
-        let link = element.baseUrl;
-        imageslink = link.replace("_{size}", "");
-        let images = document.querySelector(".carousel-inner");
-        let str = `<div class="carousel-item active position-static">
-                       <img src="${imageslink}" alt="" width="500" height="350">
-                        </div>
-                        `;
-        console.log(imageslink);
-        images.innerHTML = str;
-      }
-    })
+      console.log(response);
+      loader.style.display = "none";
+      let hotelname = document.querySelector("#hotelname");
+      let amenities = document.querySelector("#amenities");
+      let cityname = document.querySelector("#cityname");
+      let description = document.querySelector("#descpara");
+      let address = `${response.data[0].location_string}`;
+      description.innerHTML = `${response.data[0].description}`;
+      cityname.innerHTML = `${response.data[0].parent_display_name}`;
+      hotelname.innerHTML = `${response.data[0].name}`;
+      let amen = response.data[0].amenities;
+      amen.forEach((element) => {
+        let str = `<li>${element.key}</li>`;
+        amenities.innerHTML += str;
+      });
+      let res = response?.data[0]?.photo?.images;
 
+      let images = document.querySelector(".carousel-inner");
+      let str = `<div class="carousel-item active position-static">
+                <img src="${res?.large?.url}" alt="" width="500" height="350">
+                                </div>
+                                `;
+
+      images.innerHTML = str;
+    })
     .catch((err) => {
+      console.error(err);
+      loader.style.display = "none";
+      let str1;
       images = document.querySelector(".carousel-inner");
       str1 = `<div class="carousel-item active position-static">
             <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="" width="500" height="350">
@@ -68,59 +92,14 @@ function hotelimages(id) {
             <img src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg" alt="" width="500" height="350">
           </div>`;
       images.innerHTML += str1;
-      console.error(err);
-    });
-}
 
-hotelimages(id);
-
-function hoteldetail(id) {
-  localStorage.removeItem("id");
-
-  const options = {
-    method: "GET",
-    headers: {
-      "X-RapidAPI-Key": "1d0c0bb895msh1e5a7342836dd3cp10cfb0jsnbfb45de784ac",
-      "X-RapidAPI-Host": "hotels4.p.rapidapi.com",
-    },
-  };
-
-  fetch(
-    `https://hotels4.p.rapidapi.com/properties/get-details?id=${id}&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&currency=USD&locale=en_US`,
-    options
-  )
-    .then((response) => response.json())
-    .then((response) => {
-      let hotelname = document.querySelector("#hotelname");
-      let amenities = document.querySelector("#amenities");
-      let cityname = document.querySelector("#cityname");
-      let description = document.querySelector("#descpara");
-      let address = `${response.data.body.propertyDescription.address.fullAddress}`;
-      localStorage.setItem("address", address);
-      description.innerHTML = `${response.data.body.atAGlance.keyFacts.specialCheckInInstructions[0]}`;
-      cityname.innerHTML = `${response.data.body.propertyDescription.address.provinceName}`;
-      hotelname.innerHTML = `${response.data.body.propertyDescription.name}`;
-      localStorage.setItem(
-        "hname",
-        `${response.data.body.propertyDescription.name}`
-      );
-      let res = response.data.body.overview.overviewSections[0].content;
-      res.forEach((element, index) => {
-        console.log(element);
-        let str = `<li>${element}</li>`;
-        amenities.innerHTML += str;
-      });
-    })
-    .catch((err) => {
-      console.error(err);
       let amenities = document.querySelector("#amenities");
       let str = `   <li>Room service</li>
-                        <li>Restaurat</li>
-                        <li>Business center</li>
-                        <li>Fitness center</li>
-                        <li>Pool</li>`;
+                                  <li>Restaurat</li>
+                                  <li>Business center</li>
+                                  <li>Fitness center</li>
+                                  <li>Pool</li>`;
       amenities.innerHTML += str;
     });
 }
-
-hoteldetail(id);
+hoteldetails(locationid);

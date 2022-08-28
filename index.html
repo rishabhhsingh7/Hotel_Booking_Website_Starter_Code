@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
       rel="stylesheet"
@@ -19,17 +20,23 @@
   </head>
 
   <body>
+    <div class="loadcontainer">
+      <div class="loader"></div>
+    </div>
     <div class="container">
       <header>
         <!-- header content is adding dynamically through javascript -->
       </header>
+
       <section>
         <div id="search-bar-div">
-          <input id="city" type="text" placeholder="City" />
+          <form action="./list.html" method="GET">
+            <input id="city" name="city" type="text" placeholder="City" />
+          </form>
         </div>
         <div id="content-images-div">
           <div class="imageclass">
-            <a href="./list.html" onclick="find('Delhi')"
+            <a href="#" onclick="find('Delhi')"
               ><img
                 src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"
               />
@@ -37,7 +44,7 @@
             </a>
           </div>
           <div class="imageclass">
-            <a href="./list.html" onclick="find('Goa')">
+            <a href="#" onclick="find('Goa')">
               <img
                 src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg"
               />
@@ -45,52 +52,52 @@
             </a>
           </div>
           <div class="imageclass">
-            <a href="./list.html" onclick="find('hyderabad')">
+            <a href="#" onclick="find('hyderabad')">
               <img
                 src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg"
               />
-              <p id="cityname">Hyderabad</p></a
-            >
+              <p id="cityname">Hyderabad</p>
+            </a>
           </div>
           <div class="imageclass">
-            <a href="./list.html" onclick="find('Kolkata')">
+            <a href="#" onclick="find('Kolkata')">
               <img
                 src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg"
               />
-              <p id="cityname">Kolkata</p></a
-            >
+              <p id="cityname">Kolkata</p>
+            </a>
           </div>
           <div class="imageclass collapse">
-            <a href="./list.html" onclick="find('chennai')">
+            <a href="#" onclick="find('chennai')">
               <img
                 src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg"
               />
-              <p id="cityname">Chennai</p></a
-            >
+              <p id="cityname">Chennai</p>
+            </a>
           </div>
           <div class="imageclass collapse">
-            <a href="./list.html" onclick="find('agra')">
+            <a href="#" onclick="find('agra')">
               <img
                 src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/fc/agra.jpg"
               />
-              <p id="cityname">Agra</p></a
-            >
+              <p id="cityname">Agra</p>
+            </a>
           </div>
           <div class="imageclass collapse">
-            <a href="./list.html" onclick="find('Jaipur')">
+            <a href="#" onclick="find('Jaipur')">
               <img
                 src="https://media-cdn.tripadvisor.com/media/photo-s/10/a3/3b/8a/screenshot-2017-09-12.jpg"
               />
-              <p id="cityname">Jaipur</p></a
-            >
+              <p id="cityname">Jaipur</p>
+            </a>
           </div>
           <div class="imageclass collapse">
-            <a onclick="find('Bengaluru')" href="./list.html">
+            <a onclick="find('Bengaluru')" href="#">
               <img
                 src="https://media-cdn.tripadvisor.com/media/photo-s/0c/d2/2f/7a/palace-from-the-outside.jpg"
               />
-              <p id="cityname">Bengaluru</p></a
-            >
+              <p id="cityname">Bengaluru</p>
+            </a>
           </div>
         </div>
         <div id="content-viewmore-div">
@@ -106,9 +113,13 @@
       <footer></footer>
     </div>
 
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQmmKSTvEXkCYRaoVerfHc3L29HpmZLdo&libraries=places"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="./scripts/common.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/common.js"></script>
   </body>
 </html>
